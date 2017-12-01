@@ -19,6 +19,7 @@ The sample implements a scenario in which a NativeScript app references two plug
 
 ## Sample source
 
+### after-prepare hook
 ```
 const sourceMapLocation = '/node_modules/plugin1/platforms/ios/module.modulemap';
 const targetMapLocation = '/platforms/ios/GVRSDK/module.modulemap';
@@ -32,7 +33,7 @@ module.exports = function (logger, platformsData, projectData, hookArgs, $usbLiv
     fs.copyFileSync(projectData.projectDir + sourceMapLocation, projectData.projectDir + targetMapLocation);
 }
 ```
-
+### module.modulemap contents
 And here's a sample of how the `module.modulemap` will look like:
 
 ```
