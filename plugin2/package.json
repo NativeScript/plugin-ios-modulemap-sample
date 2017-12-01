@@ -1,0 +1,23 @@
+{
+  "name": "plugin2",
+  "version": "0.0.1",
+  "scripts":{
+    "postinstall": "node postinstall.js",
+    "preuninstall": "node preuninstall.js"
+  },
+  "nativescript": {
+    "platforms": {
+      "ios": "3.4.0"
+    },
+    "hooks": [
+      {
+        "type": "after-prepare",
+        "script": "scripts/after-prepare.js",
+        "inject": true
+      }
+    ]
+  },
+  "dependencies": {
+    "nativescript-hook": "^0.2.2"
+  }
+}
