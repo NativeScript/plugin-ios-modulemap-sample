@@ -14,8 +14,10 @@ This sample implements an automated approach for doing this by integrating Nativ
 # Dependencies
 To work with NativeScript hooks you will need to install the `nativescript-hook` plugin and integrate it into your plugin as instructed here: https://github.com/NativeScript/nativescript-hook
 
-# Implementing the `module.modulemap` copy hook
-After integrating `nativescript-hook` you need to write an `after-prepare` hook that does the `module.modulemap` relocation. Here's a sample:
+# Implementation
+The sample implements a scenario in which a NativeScript app references two plugins that use static native libraries coming from Pods. Both plugins define `module.modulemap` files to expose the native APIs of the corresponding libraries. A NativeScript hook is used to copy the module maps after the plugin is prepared to a location within the app's `platforms/ios` folder. 
+
+## Sample source
 
 ```
 const sourceMapLocation = '/node_modules/plugin1/platforms/ios/module.modulemap';
