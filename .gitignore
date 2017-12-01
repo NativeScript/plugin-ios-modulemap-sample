@@ -1,4 +1,4 @@
 .DS_Store
-platforms/
+testapp/platforms/
 node_modules/
 hooks/

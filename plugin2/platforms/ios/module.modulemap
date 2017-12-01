@@ -1,0 +1,4 @@
+module GoogleAnalytics {
+    umbrella "../Pods/GoogleAnalytics/Sources"
+    export *
+}

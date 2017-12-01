@@ -1,7 +1,7 @@
 {
   "name": "plugin2",
   "version": "0.0.1",
-  "scripts":{
+  "scripts": {
     "postinstall": "node postinstall.js",
     "preuninstall": "node preuninstall.js"
   },
